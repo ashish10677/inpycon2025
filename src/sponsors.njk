@@ -1,0 +1,93 @@
+---
+title: Sponsors - PyCon India 2025
+description: Sponsor PyCon India 2025 and support the Python community
+layout: base.njk
+---
+
+{% from "components/button.njk" import button %}
+{% from "components/window.njk" import window %}
+<div class="w-full h-auto bg-pycon-blue -mb-24 px-[6%] flex flex-col md:flex-row">
+    <div class="pt-[11.19rem] pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            Why Sponsor?
+        </div>
+        <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-60">
+            <p>PyCon India 2025 is back in Bengaluru, Karnataka, allowing our community to come together to network, learn, share
+                ideas, and create new relationships and partnerships.</p>
+            <p class="pt-4">Your sponsorship helps us make PyCon India accessible to developers from diverse backgrounds and
+                supports the growth of the Python community in India.</p>
+            <p class="pt-4">We invite you to be a part of this vibrant community and showcase your brand at the largest Python
+                conference in India. Join us in making PyCon India 2025 a success and help shape the future of Python in India!</p>
+            <p class="pt-4">As a sponsor, you will have the opportunity to connect with a diverse audience of Python enthusiasts,
+                developers, and industry leaders. Your support will not only enhance your brand visibility but also contribute to the
+                growth and sustainability of the Python community in India. We offer a range of sponsorship packages to suit your needs,
+                from title sponsorship to community support. Each package is designed to provide maximum exposure and engagement
+                opportunities for your brand.</p>
+        </div>
+    </div>
+    <div
+        class="flex flex-col w-[30%] lg:w-[30%] pt-[8rem] relative transition-transform duration-100"
+        style="animation: floating 2s ease-in-out infinite;">
+        <img src="{{ env.baseUrl }}img/assets/sponsors.svg" alt="Sponsors" class="w-full block">
+        <img src="{{ env.baseUrl }}img/assets/sponsor_base.svg" alt="Sponsor Base" class="w-full block">
+        <img src="{{ env.baseUrl }}img/assets/star-pink-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10 relative -top-8 md:-top-8 left-60 md:left-60"></div>
+    </div>
+    <div class="main-container pt-16 md:pt-48 bg-lavender w-full h-auto px-[6%]">
+        <div class="pb-40 md:pb-60 lg:pb-[20%] w-full text-justify lg:w-[70%]">
+            <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
+                {% call window(dimen=200, bg="lime")-%}
+                    <div class="p-8">
+                        <!-- Header with window controls -->
+                        <div class="bg-purple-400 -m-8 mb-8 px-6 py-4 flex justify-between items-center">
+                            <div></div>
+                            <div class="flex space-x-2">
+                                <div class="w-4 h-4 bg-pycon-lime rounded-full border border-black border-2"></div>
+                                <div class="w-4 h-4 bg-pycon-lime rounded-full border border-black border-2"></div>
+                                <div class="w-4 h-4 bg-pycon-lime rounded-full border border-black border-2"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Content -->
+                        <span class="font-semibold text-black">What you can expect when you sponsor PyCon India:</span>
+                        <ul class="list-none space-y-4">
+                            <li class="flex items-start">
+                                <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600 pd-6"></div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Reach</span>
+                                    <span class="text-gray-600"> - Access to 2,500+ attendees interested in your products and services and generate qualified leads.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Brand strength</span>
+                                    <span class="text-gray-600"> - Being part of the biggest and most prestigious Python conference in the world and supporting the nonprofit organization behind the Python language.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Connections</span>
+                                    <span class="text-gray-600"> - Networking with attendees in person to create connections and provide detailed information about your products and services.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Recruiting</span>
+                                    <span class="text-gray-600"> - Access to qualified job candidates. If you're hiring, there's no better place to find Python developers than PyCon India.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">12 months of benefits</span>
+                                    <span class="text-gray-600"> - Reach the Python community during PyCon India and beyond, with options for recognition on <a href="https://python.org" class="text-blue-600 underline">Python.org</a>, <a href="https://pypi.org" class="text-blue-600 underline">PyPI.org</a>, and more.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                {%- endcall %}
+            </div>
+        </div>
+    </div>
