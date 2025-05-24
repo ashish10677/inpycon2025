@@ -138,6 +138,18 @@ body {
   animation: bounce-slow 3s infinite;
 }
 
+.animate-bounce-fast {
+  animation: bounce 2s infinite;
+}
+
+.animate-bounce-slower {
+  animation: bounce-slow 3.5s infinite;
+}
+
+.animate-bounce-slowest {
+  animation: bounce-slow 5s infinite;
+}
+
 /* Hamburger menu styles */
 .hamburger {
   cursor: pointer;
@@ -423,4 +435,62 @@ body:not(.is-home-page) main {
 
 .bg-lavender {
   background-color: #F0EEFF;
+}
+
+/* Window Component Styles */
+.window-container {
+  position: relative;
+  display: inline-block;
+}
+
+.window-container .face {
+  position: absolute;
+  border: 1.5px solid black;
+}
+
+.window-container .face.top {
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+}
+
+.window-container .face.left {
+  border-right-width: 1.5px;
+  border-top-width: 1px;
+  border-left-width: 1.5px;
+}
+
+.window-container .face.front {
+  border-top-width: 0px;
+  border-left-width: 0px;
+  overflow: hidden;
+}
+
+/* Window title bar */
+.window-titlebar {
+  background-color: #CD89FF;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid black;
+  border-top: 1px solid black;
+  flex-shrink: 0;
+}
+
+.window-titlebar-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.window-titlebar-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #D7FF7B;
+  border-radius: 50%;
+  border: 1.5px solid black;
+}
+
+/* Window content area */
+.window-content {
+  padding: 20px;
 }

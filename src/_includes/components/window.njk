@@ -27,38 +27,38 @@
         {% set resolved_left_bg = leftBg %}
     {% endif %}
     
-    <div class="window-container" style="width: {{ width + depth }}px; height: {{ height + depth }}px; position: relative;">
+    <div class="window-container" style="width: {{ width + depth }}px; height: {{ height + depth }}px;">
         <!-- Top Panel -->
-        <div
-            class="face top"
-            style="position: absolute; width: {{ width }}px; height: {{ depth }}px; background-color: {{ resolved_top_bg }}; border: 1.5px solid black; border-bottom-width: 1px; border-left-width: 1px;
-                transform: skewX(45deg) translateX({{ depth / 2 }}px) translateY(-{{ depth / 2 }}px); opacity: 0.9;">
-        </div>
-        <!-- Left Panel -->
-        <div
-            class="face left"
-            style="position: absolute; width: {{ depth }}px; height: {{ height }}px; background-color: {{ resolved_left_bg }}; border: 1.5px solid black; border-right-width: 1px; border-top-width: 1px;
-                transform: skewY(45deg) translateY({{ depth / 2 }}px) translateX(-{{ depth / 2 }}px); opacity: 0.8;">
-        </div>
-        <!-- Front Face -->
-        <div
-            class="face front"
-            style="position: absolute; width: {{ width }}px; height: {{ height }}px; background-color: {{ resolved_front_bg }}; border: 1.5px solid black; border-top-width: 1px; border-left-width: 1px;
-                transform: translateX({{ depth / 2 }}px) translateY({{ depth / 2 }}px);">
-            <!-- Purple band with dots -->
-            <div style="background-color: #CD89FF; padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1.5px solid black;">
-                <div></div>
-                <div style="display: flex; gap: 8px;">
-                    <div style="width: 12px; height: 12px; background-color: #D7FF7B; border-radius: 50%; border: 1.5px solid black;"></div>
-                    <div style="width: 12px; height: 12px; background-color: #D7FF7B; border-radius: 50%; border: 1.5px solid black;"></div>
-                    <div style="width: 12px; height: 12px; background-color: #D7FF7B; border-radius: 50%; border: 1.5px solid black;"></div>
-                </div>
+            <div
+                class="face top"
+                style="width: {{ width }}px; height: {{ depth }}px; background-color: {{ resolved_top_bg }};
+                    transform: skewX(45deg) translateX({{ depth / 2 }}px) translateY(-{{ depth / 2 }}px);">
             </div>
-            {% if caller %}
-                <div style="padding: 20px;">
-                    {{ caller() }}
+            <!-- Left Panel -->
+            <div
+                class="face left"
+                style="width: {{ depth }}px; height: {{ height }}px; background-color: {{ resolved_left_bg }};
+                    transform: skewY(45deg) translateY({{ depth / 2 }}px) translateX(-{{ depth / 2 }}px);">
+            </div>
+            <!-- Front Face -->
+            <div
+                class="face front"
+                style="width: {{ width }}px; height: {{ height }}px; background-color: {{ resolved_front_bg }};
+                    transform: translateX({{ depth / 2 }}px) translateY({{ depth / 2 }}px);">
+                <!-- Purple band with dots -->
+                <div class="window-titlebar">
+                    <div></div>
+                    <div class="window-titlebar-dots">
+                        <div class="window-titlebar-dot"></div>
+                        <div class="window-titlebar-dot"></div>
+                        <div class="window-titlebar-dot"></div>
+                    </div>
                 </div>
-            {% endif %}
+                {% if caller %}
+                    <div class="window-content">
+                        {{ caller() }}
+                    </div>
+                {% endif %}
+            </div>
         </div>
-    </div>
 {% endmacro %}
