@@ -35,57 +35,46 @@ layout: base.njk
     <div class="main-container pt-16 md:pt-48 bg-lavender w-full h-auto px-[6%]">
         <div class="pb-40 md:pb-60 lg:pb-[20%] w-full text-justify lg:w-[70%]">
             <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
-                    <div class="p-8">
-                        <!-- Header with window controls -->
-                        <div class="bg-purple-400 -m-8 mb-8 px-6 py-4 flex justify-between items-center">
-                            <div></div>
-                            <div class="flex space-x-2">
-                                <div class="w-4 h-4 bg-pycon-lime rounded-full border border-black border-2"></div>
-                                <div class="w-4 h-4 bg-pycon-lime rounded-full border border-black border-2"></div>
-                                <div class="w-4 h-4 bg-pycon-lime rounded-full border border-black border-2"></div>
+                {% call window(width=800, height=500, depth=20, frontBg="lavender", leftBg="lime", topBg="lime") %}
+                    <span class="font-semibold text-black">What you can expect when you sponsor PyCon India:</span>
+                    <ul class="list-none space-y-4 mt-4">
+                        <li class="flex items-start">
+                            <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
+                            <div>
+                                <span class="font-semibold text-gray-800">Reach</span>
+                                <span class="text-gray-600"> - Access to 2,500+ attendees interested in your products and services and generate qualified leads.</span>
                             </div>
-                        </div>
-                        
-                        <!-- Content -->
-                        <span class="font-semibold text-black">What you can expect when you sponsor PyCon India:</span>
-                        <ul class="list-none space-y-4">
-                            <li class="flex items-start">
-                                <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600 pd-6"></div>
-                                <div>
-                                    <span class="font-semibold text-gray-800">Reach</span>
-                                    <span class="text-gray-600"> - Access to 2,500+ attendees interested in your products and services and generate qualified leads.</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
-                                <div>
-                                    <span class="font-semibold text-gray-800">Brand strength</span>
-                                    <span class="text-gray-600"> - Being part of the biggest and most prestigious Python conference in the world and supporting the nonprofit organization behind the Python language.</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
-                                <div>
-                                    <span class="font-semibold text-gray-800">Connections</span>
-                                    <span class="text-gray-600"> - Networking with attendees in person to create connections and provide detailed information about your products and services.</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
-                                <div>
-                                    <span class="font-semibold text-gray-800">Recruiting</span>
-                                    <span class="text-gray-600"> - Access to qualified job candidates. If you're hiring, there's no better place to find Python developers than PyCon India.</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
-                                <div>
-                                    <span class="font-semibold text-gray-800">12 months of benefits</span>
-                                    <span class="text-gray-600"> - Reach the Python community during PyCon India and beyond, with options for recognition on <a href="https://python.org" class="text-blue-600 underline">Python.org</a>, <a href="https://pypi.org" class="text-blue-600 underline">PyPI.org</a>, and more.</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
+                            <div>
+                                <span class="font-semibold text-gray-800">Brand strength</span>
+                                <span class="text-gray-600"> - Being part of the biggest and most prestigious Python conference in the world and supporting the nonprofit organization behind the Python language.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
+                            <div>
+                                <span class="font-semibold text-gray-800">Connections</span>
+                                <span class="text-gray-600"> - Networking with attendees in person to create connections and provide detailed information about your products and services.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
+                            <div>
+                                <span class="font-semibold text-gray-800">Recruiting</span>
+                                <span class="text-gray-600"> - Access to qualified job candidates. If you're hiring, there's no better place to find Python developers than PyCon India.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-4 h-4 bg-pycon-lime rounded-full mr-4 mt-1 flex-shrink-0 border-2 border-green-600"></div>
+                            <div>
+                                <span class="font-semibold text-gray-800">12 months of benefits</span>
+                                <span class="text-gray-600"> - Reach the Python community during PyCon India and beyond, with options for recognition on <a href="https://python.org" class="text-blue-600 underline">Python.org</a>, <a href="https://pypi.org" class="text-blue-600 underline">PyPI.org</a>, and more.</span>
+                            </div>
+                        </li>
+                    </ul>
+                {% endcall %}
             </div>
         </div>
     </div>
